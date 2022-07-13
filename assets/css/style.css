@@ -18,16 +18,23 @@ table {
 body{
     font-family: 'Sora', sans-serif;
     font-size: 16px;
+    font-weight: 300;
     color: #fff;
+    background-color: #0E0E0E;
 }
 .orange__text{
     color: var(--orange-color);
     font-weight: 500;
 }
+strong{
+    font-weight: bold;
+}
 /* Top content */
 section.top__content{
-    padding:4rem 0 2rem 0;
+    padding: 4rem 0 2rem 0;
     background-image: url(../img/top-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .top__title{
@@ -61,4 +68,33 @@ section.top__content{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+}
+.scroll__indicator{
+    width: 24px;
+    height: 42px;
+    border: 3px solid white;
+    border-radius: 20px;
+    position: relative;
+}
+.scroll__ball{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll__ball-animation 2s infinite;
+}
+@keyframes scroll__ball-animation{
+    0%{
+        top: 0;
+        transition: all 1s ;
+    }
+    100%{
+        top: 70%;
+        transition: all 1.2s ;
+    }
+
 }
