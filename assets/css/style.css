@@ -21,6 +21,7 @@ body{
     font-weight: 300;
     color: #fff;
     background-color: #0E0E0E;
+    -webkit-font-smoothing: antialiased;
 }
 .orange__text{
     color: var(--orange-color);
@@ -61,13 +62,17 @@ section.top__content{
     padding: 18px;
     gap: 10px;
     width: 234px;
-    height: 64px;
+    height: 48px;
     background: #FF6600;
     border-radius: 32px;
     font-size: 1.1em;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+}
+.rounded__btn:hover{
+    color: #fff;
+    opacity: .6;
 }
 .scroll__indicator{
     width: 24px;
@@ -97,4 +102,128 @@ section.top__content{
         transition: all 1.2s ;
     }
 
+}
+
+/* waves section */
+section.waves__bg{
+    padding: 4rem 0;
+    background-image: url("../img/waves-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+section.waves__bg::after{
+    content: '';
+    position: absolute;
+    bottom: -1em;
+    right: 0;
+    width: 116px;
+    height: 258px;
+    background-image: url("../img/waves-after.png");
+    background-size: contain;
+    z-index: 0;
+    background-repeat: no-repeat;
+}
+.items__content p{
+    font-size: 1.4em;
+}
+.items__content p:nth-child(2),.items__content p:nth-child(3){
+    margin-top: 1em;
+}
+.items__content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.6em;
+    width: 18px;
+    height: 163px;
+    background-image: url("../img/items-indicator.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.items__content-2.items__content::before{
+    height: 192px;
+    top: .6em;
+}
+
+/* QUEM SOMOS */
+section.aboutUs {
+    padding: 3rem 0;
+    background-image: url("../img/about-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* cards landingpages */
+section.cards__landing{
+    padding: 3rem 0
+}
+
+.card__content{
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+}
+.card__content p{
+    font-size: 1.1em;
+}
+/* FAQ */
+section.faq{
+    padding: 3rem 0;
+}
+section.faq .img-faq{
+    width: 50%;
+}
+
+section.faq .rounded__btn{
+    width: 290px;
+}
+
+/* FOOTER */
+footer{
+    padding: 3rem 0;
+    background-image: url("../img/footer-bg.png");
+}
+.purple__text{
+    color: #660099;
+}
+/* MOBILE */
+@media screen and (max-width: 768px){
+    .top__title{
+        font-size: 3em;
+    }
+    .top__text{
+        font-size: 1.1em;
+    }
+    .top__content strong{
+        font-size: 1.1em;
+    }
+    .top__text-secondary{
+        font-size: .9em;
+    }
+    .rounded__btn{
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 1em;
+    }
+    .items__content p{
+        font-size: 1.2em;
+    }
+    section.aboutUs {
+        background-size: cover;
+    }
+    section.top__content{
+        background-size: auto;
+    }
+    section.faq .img-faq{
+        width: 100%;
+    }
 }
