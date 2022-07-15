@@ -34,7 +34,7 @@ strong{
     color: #660099;
 }
 .bg-purple{
-    background-color: #660099;
+    background-color: #660099 !important;
 }
 /* Top content */
 section.top__content{
