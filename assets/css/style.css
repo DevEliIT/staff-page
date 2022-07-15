@@ -30,6 +30,12 @@ body{
 strong{
     font-weight: bold;
 }
+.purple__text{
+    color: #660099;
+}
+.bg-purple{
+    background-color: #660099;
+}
 /* Top content */
 section.top__content{
     padding: 4rem 0 2rem 0;
@@ -219,9 +225,7 @@ footer{
     padding: 3rem 0;
     background-image: url("../img/footer-bg.png");
 }
-.purple__text{
-    color: #660099;
-}
+
 /* MOBILE */
 @media screen and (max-width: 768px){
     .top__title{
