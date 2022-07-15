@@ -159,7 +159,20 @@ section.aboutUs {
 
 /* cards landingpages */
 section.cards__landing{
-    padding: 3rem 0
+    padding: 4rem 0;
+}
+
+section.cards__landing::before{
+    content: '';
+    position: absolute;
+    top: -1em;
+    left: 0;
+    width: 116px;
+    height: 258px;
+    background-image: url("../img/landing-before.png");
+    background-size: contain;
+    z-index: 0;
+    background-repeat: no-repeat;
 }
 
 .card__content{
@@ -186,6 +199,21 @@ section.faq .rounded__btn{
     width: 290px;
 }
 
+.accordion-button {
+    color: var(--orange-color);
+    background-color: #DFDFDF;
+    font-weight: bold;
+}
+.accordion-button:not(.collapsed){
+    color: #fff;
+    background-color: var(--orange-color);
+}
+.accordion-button::after{
+    background-image: url("../img/arrow.png");
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url("../img/arrow-white.png");
+}
 /* FOOTER */
 footer{
     padding: 3rem 0;
@@ -225,5 +253,24 @@ footer{
     }
     section.faq .img-faq{
         width: 100%;
+    }
+    section.cards__landing::before, section.waves__bg::after{
+        display: none;
+    }
+    .items__content p:nth-child(2), .items__content p:nth-child(3) {
+        margin-top: 1.5em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 820px){
+    .items__content-2.items__content::before {
+        height: 265px;
+        background-size: cover;
+    }
+    .items__content::before{
+        height: 214px;
+    }
+    section.top__content, section.aboutUs{
+        background-size: cover;
     }
 }
